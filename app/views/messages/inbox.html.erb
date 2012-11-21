@@ -1,0 +1,22 @@
+
+
+<h1>inbox</h1><hr>
+<br>
+<% @inbox.each do |m| %>
+
+	From: <%= m.sender.name %><br>
+	To: <%= m.receiver.name %><br>
+	Subject: <%= m.subject %><br>
+	Message: <%= m.message %><br>
+	<hr>
+<% end %><br><br>
+
+<h1>sentbox</h1><hr>
+<br>
+<% @sentbox.each do |m| %>
+	From: <%= m.sender.name %><br>
+	To: <%= m.receiver.name %><br>
+	Subject: <%= m.subject %><br>
+	Message: <%= m.message %><br>
+	<hr>
+<% end %>

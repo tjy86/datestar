@@ -9,13 +9,15 @@ class	MessagesController < ApplicationController
 		m[:sender_id] = @authenticated_user.id
 		m[:receiver_id] = params[:receiver_id]
 		if @authenticated_user && m.save
-			redirect_to sent_path
+			redirect_to user_path
 		else
 			render :index
 		end
-
 	end
-	def sent
-
+	def inbox
+		user_id = params[:id]
+		@inbox = User.find(user_id).receive
+		@sentbox = User.find(user_id).send
 	end
+
 end
