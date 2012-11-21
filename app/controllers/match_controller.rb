@@ -16,7 +16,7 @@ class MatchController < ApplicationController
   			m[:receiver_id] = @r.to_i
   			m[:match] = 1
   			m.save
-  			redirect_to root_path
+  			redirect_to message_path
   		else
   			m = Match.new
   			m[:sender_id] = @authenticated_user.id
