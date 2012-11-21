@@ -25,6 +25,10 @@ class MatchController < ApplicationController
   			m.save
   			redirect_to users_path
   		end
-
   	end
+    def show
+      user_id = params[:id]
+      @me_to_you = User.find(user_id).initiator
+      @you_to_me = User.find(user_id).initiated
+    end
 end
