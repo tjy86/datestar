@@ -22,7 +22,7 @@ Datestar::Application.routes.draw do
   match '/match/show/:id' => 'match#show', :via => :get, :as => 'match_show'
 
   match '/message/:id' => 'messages#index', :via => :get, :as => 'messages'
-  match '/message/:id' => 'messages#create', :via => :post
+  match '/message/:id' => 'messages#create', :via => :post, :as => 'write'
   match '/sent/:id' => 'messages#sent', :via => :get, :as => 'sent'
   match '/inbox/:id' => 'messages#inbox', :via => :get, :as => 'inbox'
 
