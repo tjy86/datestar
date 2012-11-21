@@ -10,7 +10,7 @@ class AnswersController < ApplicationController
 		@a = Answer.new(params[:answer])
 
 		if @a.save
-			redirect_to users_path
+			Match.new
 		else
 			render :index
 		end
