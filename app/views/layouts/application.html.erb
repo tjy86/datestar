@@ -9,18 +9,17 @@
 </head>
 <body>
 
-<nav>
-	<br>
-	<h1> Logged in as: <%= @authenticated_user.name if @authenticated_user %>  </h1>
-	<hr>
+<header>
+  <div id="logo"></div>
+    <nav>
+    	<h1> Logged in as: <%= @authenticated_user.name if @authenticated_user %>  </h1>
 
-	<%= show_dynamic_links %>
-	<%= link_to "users", users_path %>
-	<%= link_to "new user", new_user_path %>
-	<%= link_to "new question", questions_path %>
-	<hr>
-</nav>
-<%= yield %>
+    	<%= show_dynamic_links %>
+    	<%= link_to "users", users_path %>
+    	<%= link_to "new user", new_user_path %>
+    	<%= link_to "new question", questions_path %>
+    </nav>
+</header>
 
 	<div class="main">	
 		<%= yield %>
