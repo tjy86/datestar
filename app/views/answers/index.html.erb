@@ -1,0 +1,13 @@
+<%= form_for @a do |f| %>
+	<%= f.label :correct_answer %>
+	<%= f.text_field :answer1 %>
+
+	<%= f.label :fake_answer %>
+	<%= f.text_field :answer2 %>
+
+	<%= f.label :fake_answer %>
+	<%= f.text_field :answer3 %>
+<%binding.pry %>
+	<%= f.hidden_field :question_id, :value => Question.where(:user_id => @authenticated_user.id).last if @authenticated_user %>
+	<%= f.submit 'save' %>
+<% end %>
