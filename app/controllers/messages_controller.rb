@@ -17,7 +17,7 @@ class	MessagesController < ApplicationController
 	def inbox
 		user_id = params[:id]
 		@inbox = User.find(user_id).receive
-		@sentbox = User.find(user_id).send
+		@sentbox = User.find(user_id).sendd
 	end
 
 end
