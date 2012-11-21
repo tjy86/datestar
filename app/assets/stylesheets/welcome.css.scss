@@ -5,14 +5,14 @@
 #signup {
 width: 350px;
 height: 100px;
-background: $dark-gray;
+background: url('form.png');
 margin: 100px auto;
 border-radius: 10px;
 
 	.box {
 		width: 350px;
 		text-align: center;
-		padding-top: 35px;
+		padding-top: 40px;
 
 		a {
 		text-decoration: none;
@@ -28,8 +28,6 @@ border-radius: 10px;
 }
 
 #how-it-works {
-	height: 250px;
-	background: $light-gray;
 
 	h1 {
 	text-align: center;

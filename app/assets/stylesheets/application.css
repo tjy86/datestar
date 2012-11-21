@@ -5,4 +5,5 @@
  *= require 'main'
  *= require 'welcome'
  *= require 'login'
+ *= require 'user'
  */

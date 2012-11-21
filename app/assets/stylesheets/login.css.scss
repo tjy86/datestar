@@ -5,7 +5,7 @@
 #user-login {
 		width: 350px;
 		padding-top: 35px;
-		background: $dark-gray;
+		background: url('form.png');
 		margin: auto;
 		border-radius: 10px;
 
@@ -25,9 +25,15 @@
 			margin-bottom: 15px;
 		}
 
+		.btn {
+			margin-top: 20px;
+			margin-left: 110px;;
+		}
+
 		.field {
 			font-family: $julius;
 		}
+
 
 		a {
 		text-decoration: none;
