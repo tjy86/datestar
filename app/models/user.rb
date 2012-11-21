@@ -20,4 +20,6 @@
 class User < ActiveRecord::Base
 	has_many :photos
 	has_secure_password
+ 	has_many :matches, foreign_key: 'sender_id'
+ 	has_many :matched_users, through: :matches, source: 'receiver'
 end

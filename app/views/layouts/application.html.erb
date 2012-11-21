@@ -9,7 +9,7 @@
 <body>
 <nav>
 	<br>
-	<br>
+	<h1> Logged in as: <%= @authenticated_user.name if @authenticated_user %>  </h1>
 	<br><br><br><br><br>
 	<%= show_dynamic_links %>
 	<%= link_to "users", users_path %>

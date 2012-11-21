@@ -7,7 +7,8 @@
 
 	<%= f.label :fake_answer %>
 	<%= f.text_field :answer3 %>
-<%binding.pry %>
-	<%= f.hidden_field :question_id, :value => Question.where(:user_id => @authenticated_user.id).last if @authenticated_user %>
+
+	<%= f.hidden_field :question_id, :value => (Question.where(:user_id => @authenticated_user.id).last if @authenticated_user).id %>
+
 	<%= f.submit 'save' %>
 <% end %>

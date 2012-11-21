@@ -17,6 +17,8 @@ Datestar::Application.routes.draw do
   match '/answer' => 'answers#index', :via => :get, :as => :answers
   match '/answer' => 'answers#create', :via => :post
 
+  match '/match/:id' => 'match#index', :via => :get, :as => 'match'
+
   # match '/photo/new' => 'photo#upload', :via => :get
   # match '/photo' => 'photo#save', :via => :post
 

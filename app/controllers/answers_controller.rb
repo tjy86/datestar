@@ -6,7 +6,9 @@ class AnswersController < ApplicationController
 	end
 
 	def create
+
 		@a = Answer.new(params[:answer])
+
 		if @a.save
 			redirect_to users_path
 		else
