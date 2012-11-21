@@ -4,8 +4,8 @@
 <%= image_tag p.photo %>
 <% end %>
 
-<div id="user-info">
-  <div class="box">
+<!-- <div id="user-info">
+  <div class="box"> -->
 	<%= form_for @p, html: {multipart: true} do |f| %>
 		<%= f.label :photo %>
 		<%= f.file_field :photo  %>
@@ -14,6 +14,6 @@
 
 		<%= f.submit :upload, class: "btn" %>
 	<% end %>
-  </div>
-</div>
+<!--   </div>
+</div> -->
 
