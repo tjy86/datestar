@@ -1,0 +1,21 @@
+
+
+<h1>People I liked</h1><hr>
+<br>
+<% @me_to_you.each do |m| %>
+
+	From: <%= m.metoyou.name %><br>
+	To: <%= m.youtome.name %><br>
+	Match?: <%= m.match %><br>
+	<hr>
+<% end %><br><br>
+
+<h1>People who liked me</h1><hr>
+<br>
+<% @you_to_me.each do |m| %>
+
+	From: <%= m.metoyou.name %><br>
+	To: <%= m.youtome.name %><br>
+	Match?: <%= m.match %><br>
+	<hr>
+<% end %><br><br>

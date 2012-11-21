@@ -5,10 +5,16 @@
 
 <%= @q.question  %>
 <br>
-<%= @a[0].answer1 %><br>
-<%= @a[0].answer2 %><br>
-<%= @a[0].answer3 %><br>
+
+
+
 
 <%= form_tag do %>
-
+<%= hidden_field_tag 'question', @q.id %>
+<%= hidden_field_tag 'receiver', @receiver.id %>
+<!-- loop here to randomize -->
+	<%= radio_button_tag 'answer', @a[0].answer1, false %><%= @a[0].answer1 %><br>
+	<%= radio_button_tag 'answer', @a[0].answer2, false %><%= @a[0].answer2 %><br>
+	<%= radio_button_tag 'answer', @a[0].answer3, false %><%= @a[0].answer3 %><br>
+	<%= submit_tag 'go' %>
 <% end %>

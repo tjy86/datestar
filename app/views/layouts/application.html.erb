@@ -16,6 +16,8 @@
 			<%= link_to "USERS", users_path %>
 			<%= link_to "NEW USER", new_user_path %>
 			<%= link_to "NEW QUESTION", questions_path %>
+			<%= link_to "matches", match_path(@authenticated_user) if @authenticated_user %>
+			<%= link_to "inbox", inbox_path(@authenticated_user)  if @authenticated_user %>
 		</nav>
 	</header>
 

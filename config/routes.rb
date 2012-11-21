@@ -18,6 +18,13 @@ Datestar::Application.routes.draw do
   match '/answer' => 'answers#create', :via => :post
 
   match '/match/:id' => 'match#index', :via => :get, :as => 'match'
+  match '/match/:id' => 'match#check', :via => :post
+  match '/match/show/:id' => 'match#show', :via => :get, :as => 'match_show'
+
+  match '/message/:id' => 'messages#index', :via => :get, :as => 'messages'
+  match '/message/:id' => 'messages#create', :via => :post
+  match '/sent/:id' => 'messages#sent', :via => :get, :as => 'sent'
+  match '/inbox/:id' => 'messages#inbox', :via => :get, :as => 'inbox'
 
   # match '/photo/new' => 'photo#upload', :via => :get
   # match '/photo' => 'photo#save', :via => :post
