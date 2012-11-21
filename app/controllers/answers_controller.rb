@@ -8,7 +8,7 @@ class AnswersController < ApplicationController
 	def create
 		@a = Answer.new(params[:answer])
 		if @a.save
-			redirect_to root_path
+			redirect_to users_path
 		else
 			render :index
 		end

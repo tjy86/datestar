@@ -11,13 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121121072642) do
+ActiveRecord::Schema.define(:version => 20121121083244) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
     t.string   "answer1"
     t.string   "answer2"
     t.string   "answer3"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "matches", :force => true do |t|
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.boolean  "match"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
