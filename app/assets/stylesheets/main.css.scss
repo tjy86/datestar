@@ -3,17 +3,21 @@
 
 body {
 
-	
+	.main {
+	width: 1200px;
+	margin: auto;
+	padding: 30px;
+}
+
 }
 
 header {
 	height: 110px;
-	background: $light-gray;
+	background: $light-blue;
 
 	#logo {
-	background: url('logo-01.png') no-repeat;
 	height: 100px;
-	margin-left: 20px;
+	margin-left: 30px;
 	width: 200px;
 	}
 
@@ -34,13 +38,11 @@ header {
 	}
 }
 
-#main {
-	width: 1200px;
-}
+
 
 footer {
 		height: 70px;
-		background: $dark-gray;
+		background: $light-blue;
 }
 
 	
