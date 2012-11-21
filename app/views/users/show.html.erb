@@ -1,8 +1,10 @@
 
 
+<h1> <%= @user.name %> </h1>
+ <%= link_to 'edit', edit_user_path %>
 
 <%= link_to 'Message Me!',  match_path, class: "btn" %>
-
+<br>
 <% @user.photos.each do |p| %>
 <%= image_tag p.photo %>
 <% end %>
