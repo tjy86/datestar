@@ -1,0 +1,48 @@
+@import "colors";
+@import "fonts";
+
+body {
+
+	
+}
+
+header {
+	height: 110px;
+	background: $light-gray;
+
+	#logo {
+	background: url('logo-01.png') no-repeat;
+	height: 100px;
+	margin-left: 20px;
+	width: 200px;
+	}
+
+	nav {
+		float: right;
+		margin-top: -20px;
+
+		a {
+			text-decoration: none;
+			color: $dark-gray;
+			padding: 25px;
+			font-family: $julius;
+			color: black;
+		}
+		a:hover {
+			color: $light-salmon;
+		}
+	}
+}
+
+#main {
+	width: 1200px;
+}
+
+footer {
+		height: 70px;
+		background: $dark-gray;
+}
+
+	
+
+
