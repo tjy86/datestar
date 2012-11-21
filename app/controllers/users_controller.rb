@@ -21,5 +21,8 @@ class UsersController < ApplicationController
 		@p = Photo.new
 
 	end
-
+	def edit
+		user_id = params[:id]
+		@user = User.find(user_id)
+	end
 end
