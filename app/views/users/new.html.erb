@@ -24,7 +24,8 @@
       </div>
       <div class="field">
         <%= f.label :gender %><br />
-        <%= f.text_field :gender %>
+        Male: <%= radio_button_tag :gender, 'male' %>
+        Female: <%= radio_button_tag :gender, 'female' %>
       </div>
 
       <div class="actions">
