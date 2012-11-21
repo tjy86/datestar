@@ -1,0 +1,34 @@
+<div id="login">
+  <%= form_for @user do |f| %>
+       <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation %>
+      </div>
+      <div class="field">
+        <%= f.label :Tag_Line %><br />
+        <%= f.text_field :tagline %>
+      </div>
+
+
+      <div class="field">
+        <%= f.label :Age %><br />
+        <%= f.text_field :age %>
+      </div>
+      <div class="field">
+        <%= f.label :gender %><br />
+        <%= f.text_field :gender %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+<% end %>
+</div>

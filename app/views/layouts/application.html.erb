@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Datestar</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav>
+	<br>
+	<br>
+	<br><br><br><br><br>
+	<%= show_dynamic_links %>
+	<%= link_to "users", users_path %>
+	<%= link_to "new user", new_user_path %>
+</nav>
+<%= yield %>
+
+</body>
+</html>
