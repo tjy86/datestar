@@ -19,6 +19,7 @@
 
 class User < ActiveRecord::Base
 	has_many :photos
+  has_many :questions
 	has_secure_password
 
  	has_many :initiator, foreign_key: 'sender_id', class_name: 'Match'
