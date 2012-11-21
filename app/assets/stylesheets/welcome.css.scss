@@ -1,0 +1,67 @@
+@import "colors";
+@import "blurb";
+@import "fonts";
+
+#signup {
+width: 350px;
+height: 100px;
+background: url('form.png');
+margin: 100px auto;
+border-radius: 10px;
+
+	.box {
+		width: 350px;
+		text-align: center;
+		padding-top: 40px;
+
+		a {
+		text-decoration: none;
+		color: white;
+		font-size: 30px;
+		font-family: $julius;
+		}
+
+	a:hover {
+		color: $light-salmon;
+		}
+	}	
+}
+
+#how-it-works {
+
+	h1 {
+	text-align: center;
+	font-size: 30px;
+	font-family: $julius;
+	padding-top: 15px;
+	}
+
+	#container{
+	width: 960px;
+	height: 180px;
+	margin: auto;
+	padding: 20px;
+
+		#blurb1 {
+			@include blurb(url('instructions-01.png') no-repeat);
+		}
+
+		#blurb2 {
+			@include blurb(url('instructions-02.png') no-repeat);
+		}
+
+		#blurb3 {
+			@include blurb(url('instructions-03.png') no-repeat);
+		}
+
+
+		p {
+			font-size: 30px;
+		}
+
+		span {
+			font-size: 130px;
+			
+		}
+	}	
+}

@@ -1,15 +1,19 @@
+<%= link_to 'Message Me!',  match_path, class: "btn" %>
+
 <% @user.photos.each do |p| %>
 <%= image_tag p.photo %>
 <% end %>
 
+<div id="user-info">
+  <div class="box">
+	<%= form_for @p, html: {multipart: true} do |f| %>
+		<%= f.label :photo %>
+		<%= f.file_field :photo  %>
 
-<%= form_for @p, html: {multipart: true} do |f| %>
-	<%= f.label :photo %>
-	<%= f.file_field :photo  %>
+			<%= f.hidden_field :user_id, :value => @authenticated_user.id if @authenticated_user %>
 
-		<%= f.hidden_field :user_id, :value => @authenticated_user.id if @authenticated_user %>
+		<%= f.submit :upload, class: "btn" %>
+	<% end %>
+  </div>
+</div>
 
-	<%= f.submit :upload %>
-<%end %>
-
-<%= link_to 'message me', match_path %>

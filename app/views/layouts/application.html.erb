@@ -5,22 +5,29 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<nav>
-	<br>
-	<h1> Logged in as: <%= @authenticated_user.name if @authenticated_user %>  </h1>
-	<hr>
+	<header>
+		<div id="logo"><%= link_to image_tag('logo-01.png'), root_path %></div>
+		<nav>
+			<!-- <h1> Logged in as: <%#= @authenticated_user.name if @authenticated_user %>  </h1> -->
+			<%= show_dynamic_links %>
+			<%= link_to "USERS", users_path %>
+			<%= link_to "NEW USER", new_user_path if !authenticated_user %>
+			<%= link_to "NEW QUESTION", questions_path if @authenticated_user %>
+			<%= link_to "MATCHES", match_path(@authenticated_user) if @authenticated_user %>
+			<%= link_to "INBOX", inbox_path(@authenticated_user)  if @authenticated_user %>
+		</nav>
+	</header>
 
-	<%= show_dynamic_links %>
-	<%= link_to "users", users_path %>
-	<%= link_to "new user", new_user_path if !@authenticated_user %>
-	<%= link_to "new question", questions_path if @authenticated_user %>
- 	<%= link_to "matches", match_path(@authenticated_user) if @authenticated_user %>
-	<%= link_to "inbox", inbox_path(@authenticated_user)  if @authenticated_user %>
-	<hr>
-</nav>
-<%= yield %>
+	<div class="main">
+		<%= yield %>
+	</div>
+
+	<footer>
+		<div id="copyrights">COPYRIGHTS</div>
+	</footer>
 
 </body>
 </html>
