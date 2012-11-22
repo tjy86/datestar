@@ -1,15 +1,21 @@
-<%= link_to 'Message Me!',  match_path, class: "btn" %>
 
+
+<h1> <%= @user.name %> </h1>
+ <%= link_to 'edit', edit_user_path %>
+
+<%= link_to 'Message Me!',  match_path, class: "btn" if @show %>			# sends to questionaire first
+<%= link_to 'Message Me!',  write_path, class: "btn" if @matched %>		# sends directly to draft
+
+<br>
 <% @user.photos.each do |p| %>
 <%= image_tag p.photo %>
 <% end %>
 
 	<%= form_for @p, html: {multipart: true} do |f| %>
-		<%= f.label :photo %>
-		<%= f.file_field :photo  %>
-
-			<%= f.hidden_field :user_id, :value => @authenticated_user.id if @authenticated_user %>
-
-		<%= f.submit :upload, class: "btn" %>
+		<%= f.label :photo if (@authenticated_user == @user) %>
+		<%= f.file_field :photo  if (@authenticated_user == @user) %>
+		<%= f.text_field :remote_photo_url if (@authenticated_user == @user) %>
+		<%= f.hidden_field :user_id, :value => @authenticated_user.id if @authenticated_user %>
+ 		<%= f.submit :upload, class: "btn"  if (@authenticated_user == @user) %>
 	<% end %>
 

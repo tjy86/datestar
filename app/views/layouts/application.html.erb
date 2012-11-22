@@ -11,15 +11,19 @@
 	<header>
 		<div id="logo"><%= link_to image_tag('logo-01.png'), root_path %></div>
 		<nav>
-			<!-- <h1> Logged in as: <%#= @authenticated_user.name if @authenticated_user %>  </h1> -->
-			<%= show_dynamic_links %>
-			<%= link_to "USERS", users_path %>
-			<%= link_to "NEW USER", new_user_path %>
-			<%= link_to "NEW QUESTION", questions_path %>
+			<strong>
+				<%= show_dynamic_links %>
+				<%= link_to "MY PROFILE", user_path(@authenticated_user) if @authenticated_user %>
+				<%= link_to "USERS", users_path if @authenticated_user %>
+				<%= link_to "NEW USER", new_user_path if !@authenticated_user %>
+				<%= link_to "NEW QUESTION", questions_path(@authenticated_user) if @authenticated_user %>
+				<%= link_to "MY MATCHES", match_show_path(@authenticated_user) if @authenticated_user %>
+				<%= link_to "MY INBOX", inbox_path(@authenticated_user)  if @authenticated_user %>
+			</strong>
 		</nav>
 	</header>
 
-	<div class="main">	
+	<div class="main">
 		<%= yield %>
 	</div>
 

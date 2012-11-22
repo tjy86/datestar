@@ -1,7 +1,19 @@
-<%= form_for @question do |f| %>
-	<%= f.label :question %>
-	<%= f.text_field :question %>
-	<%= f.hidden_field :user_id, :value => @authenticated_user.id if @authenticated_user %>
-	<%= f.submit 'save', class: "btn"%>
-<% end %>
+<p>All it takes is <strong>one</strong> right answer!</p>
+
+<ul class="nav nav-list">
+	<li class="divider"></li>
+</ul>
+
+<div class="question-box">
+
+	<div class="box">
+		<%= form_for @question do |f| %>
+			<%= f.label :question %>
+			<%= f.text_field :question %>
+			<%= f.hidden_field :user_id, :value => @authenticated_user.id if @authenticated_user %>
+			<br>
+			<%= f.submit 'Save', class: "btn" %>
+		<% end %>
+	</div>
+</div>
 

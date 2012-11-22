@@ -1,0 +1,11 @@
+hello<br>
+write some text to your lova.
+
+<%= form_for @message do |f| %>
+	<%= f.label :subject %>
+	<%= f.text_field :subject %>
+	<%= f.label :message %>
+	<%= f.text_field :message %>
+	<%= hidden_field_tag 'receiver_id', @receiver.id %>
+	<%= f.submit 'save' %>
+<% end %>

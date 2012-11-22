@@ -1,4 +1,9 @@
-#user-info {
+
+@import "colors";
+@import "blurb";
+@import "fonts";
+
+#first-login {
 	width: 350px;
 	padding-top: 35px;
 	background: url('form.png');
@@ -12,3 +17,60 @@
 	color: white;
 	}
 }
+
+p {
+	font-size: 40px;
+	text-align: center;
+	padding: 30px;	
+
+	strong {
+	color: $dark-salmon;
+	}
+
+	em {
+		font-size: 20px;
+	}
+}
+
+
+
+/**
+USERS **/
+
+#users-layout {
+	width: 940px;
+	padding-top: 15px;
+	background: url('form.png');
+
+	margin: 30px auto;
+	border-radius: 5px;
+	height: 410px;
+
+	.box{
+		height: 340px;
+		float: left;
+		margin-left: 45px;
+		/*background-color: #333;*/
+		opacity: 0.8;
+	}
+
+	#user {
+	width: 100px;
+	height: 100px;
+	background: $light-gray;
+	padding: 5px;
+	margin: 10px;
+	float: left;
+	border-radius: 2px;
+	border:6px solid $light-gray;
+	}
+
+	#user:hover {
+		background: $dark-salmon;
+	}
+
+	a {
+
+	}
+}
+

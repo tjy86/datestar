@@ -3,30 +3,34 @@
 
 body {
 	background: url('cream_dust.png');
+	font-family: $julius;
+
 
 	.main {
 	width: 1200px;
+	height: 700px;
 	margin: auto;
 	padding: 30px;
 	}
 }
 
 header {
-	height: 118px;
+	height: 130px;
 	background: $light-blue;
+
 
 	#logo {
 	height: 100px;
-	margin-left: 30px;
+	margin-left: 20px;
 	width: 200px;
 	}
 
 	nav {
 		float: right;
-		margin-top: -20px;
+		margin-top: -7px;
   		margin-left: 0;
   		list-style: none;
-  		margin-right: 20px;
+  		margin-right: 170px;
 
 		a {
 			text-decoration: none;

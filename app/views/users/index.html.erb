@@ -1,3 +1,17 @@
-<% @users.each do |u| %>
-<%= link_to u.name, u %> <br>
-<% end %>
+<p>
+	<strong>Life </strong>is one fool thing after another. <br>Where as <strong> love </strong> is two fool things after each.<em> Oscar Wild</em>
+</p>
+
+<ul class="nav nav-list">
+	<li class="divider"></li>
+</ul>
+
+<div id="users-layout">
+	<div class="box">
+		<% @users.each do |u| %>
+		<div id="user">
+			<%= link_to u.name, u %> <br>
+		</div>
+		<% end %>
+	</div>
+</div>
