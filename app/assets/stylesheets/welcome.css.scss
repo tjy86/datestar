@@ -2,12 +2,30 @@
 @import "blurb";
 @import "fonts";
 
+p {
+	font-size: 40px;
+	text-align: center;
+	padding: 30px;
+	line-height: 1;
+	margin-bottom: -10px;
+
+	strong {
+	color: $dark-salmon;
+	}
+
+	em {
+		font-size: 25px;
+	}
+}
+
+
+
 #signup {
 	width: 350px;
 	height: 100px;
 	background: url('form.png');
 	margin: 100px auto;
-	border-radius: 10px;
+	border-radius: 5px;
 
 	.box {
 		width: 350px;
@@ -22,7 +40,7 @@
 		}
 
 	a:hover {
-		color: $light-salmon;
+		color: $dark-blue;
 		}
 	}	
 }
