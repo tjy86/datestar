@@ -20,6 +20,20 @@ class UsersController < ApplicationController
 		@user = User.find(user_id)
 		@p = Photo.new
 
+		if (@authenticated_user == @user)
+			@show = false
+			@matched = false
+		elsif (Match.where(:sender_id => @authenticated_user, :receiver_id => @user).empty?)
+			@show = true
+			@matched = false
+		elsif (Match.where(:sender_id => @authenticated_user, :receiver_id => @user).first.match)
+			@show = false
+			@matched = true
+		elsif !(Match.where(:sender_id => @authenticated_user, :receiver_id => @user).first.match)
+			@show = false
+			@matched = false
+		end
+
 	end
 	def edit
 		user_id = params[:id]
