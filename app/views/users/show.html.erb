@@ -4,6 +4,13 @@
 <%= link_to 'Message Me!',  match_path, class: "btn" if @show %>		<!-- 	# sends to questionaire first -->
 <%= link_to 'Message Me!',  write_path, class: "btn" if @matched %>		<!-- # sends directly to draft -->
 
+
+<h2>Profile Picture:</h2><br>
+<% binding.pry %>
+<%= image_tag @user.photos[@user[:main_pic_id]].photo %>
+
+
+<h2>Pictures:</h2>
 <br>
 <% @user.photos.each do |p| %>
 <%= image_tag p.photo.thumb %>
