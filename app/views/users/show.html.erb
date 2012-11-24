@@ -1,13 +1,28 @@
 <h1> <%= @user.name %> </h1>
  <%= link_to 'edit', edit_user_path if @authenticated_user == @user %>
 
-<%= link_to 'Message Me!',  match_path, class: "btn" if @show %>		<!-- 	# sends to questionaire first -->
-<%= link_to 'Message Me!',  write_path, class: "btn" if @matched %>		<!-- # sends directly to draft -->
+<div class="profile">
+	<div class="subheading">Name</div>
+	<div class="subcontent"> <%= @user.name %>  </div>
+	<div class="subheading">Tagline</div>
+	<div class="subcontent"> <%= @user.tagline %>    </div>
+	<div class="subheading">Profile Picture</div>
+	<div class="subcontent"><%= image_tag @user.photos[@user[:main_pic_id]].photo if !(@user.photos.empty?) %></div>
+	<div class="subheading">Age</div>
+	<div class="subcontent"> <%= @user.age %>    </div>
+	<div class="subheading">Gender</div>
+	<div class="subcontent"> <%= @user.gender %>    </div>
+	<div class="subheading">Location</div>
+	<div class="subcontent"> <%= @user.city + @user.state %>    </div>
+	<div class="subheading">Ethnicity</div>
+	<div class="subcontent"> <%= @user.ethnicity %>    </div>
+	<div class="subheading">Description</div>
+	<div class="subcontent"> <%= @user.description %>    </div>
 
-
-<h2>Profile Picture:</h2><br>
-<% binding.pry %>
-<%= image_tag @user.photos[@user[:main_pic_id]].photo %>
+	<%= link_to 'Message Me!',  match_path, class: "btn" if @show %>		<!-- 	# sends to questionaire first -->
+	<%= link_to 'Message Me!',  write_path, class: "btn" if @matched %>		<!-- # sends directly to draft -->
+	 <%= link_to 'edit', edit_user_path if @authenticated_user == @user %>
+</div>
 
 
 <h2>Pictures:</h2>
