@@ -8,7 +8,7 @@ body {
 
 	.main {
 	width: 1200px;
-	height: 700px;
+	height: 800px;
 	margin: auto;
 	padding: 30px;
 	}
@@ -54,7 +54,79 @@ header {
 footer {
 		height: 70px;
 		background: $light-blue;
+
+		.heart:hover {
+			color: $dark-salmon;
+		}
+
+		#copyrights {
+			margin-left: 115px;
+			padding-top: 20px;
+		}
+
+			/*SOCIAL MEDIA STYLES*/
+	.sprite {
+	     background: url('../images/bg_blurb.jpg');
+	     margin-top: -10px;
+	  
+	     float: left;
+	     width: 100%;
+	     margin: auto;
+	     text-align: center;
+	}
+
+	#social-media {
+		float: right;
+		margin-right: 115px;
+	}
+
+	#social-media li {
+	     display: inline-block;
+	}
+
+	#social-media ul li a {
+	     width: 42px;
+	     height: 42px;
+	     float: left;
+	     background: url('social-sprites-02.png') no-repeat;
+	/*     /*SCOTT KELLUM IMAGE REPLACEMENT SNIPPET*/
+	     text-indent: 100%;
+	     white-space: nowrap;
+	     overflow: hidden;
+	}
+
+	     #social-media ul li a.facebook {
+	          background-position: -6px -7px;
+	     }
+
+	     #social-media ul li a.twitter {
+	          background-position: -50px -7px;
+	     }
+
+	     #social-media ul li a.facebook:hover {
+	          background-position: -6px -54px;
+	     }
+
+	     #social-media ul li a.twitter:hover {
+	          background-position: -50px -54px;
+	     }
 }
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
 
 	
 
