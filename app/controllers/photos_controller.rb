@@ -6,11 +6,14 @@ class PhotosController < ApplicationController
 	end
 
 	def create
+		# raise params.inspect
 
+		user_id = params[:photo][:user_id]
+		@user = User.find(user_id)
 		@photo = Photo.new(params[:photo])
 
 		if @photo.save
-			redirect_to users_path
+			redirect_to @user
 		else
 			render :index
 		end

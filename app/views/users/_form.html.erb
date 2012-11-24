@@ -1,52 +1,52 @@
-<div id="user-login">
+  <div id="user-login">
   <div class="box">
     <%= form_for @user do |f| %>
          <div class="field">
-            <%= f.label :name %><br />
-            <%= f.text_field :name %>
-            </div>
-            <div class="field">
-              <%= f.label :password %><br />
-              <%= f.password_field :password %>
-            </div>
-            <div class="field">
-              <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation %>
-            </div>
-            <div class="field">
-              <%= f.label :Tag_Line %><br />
-              <%= f.text_field :tagline %>
-            </div>
-            <div class="field">
-              <%= f.label :Age %><br />
-              <%= f.text_field :age %>
-            </div>
-          </div>
-          <div class="box">
-                <div class="field">
-                  <%= f.label :gender %><br />
-                  <%= f.text_field :gender %>
-                </div>
-                <div class="field">
-                  <%= f.label :city %><br />
-                  <%= f.text_field :city %>
-                </div>
-                <div class="field">
-                  <%= f.label :state %><br />
-                  <%= f.text_field :state %>
-                </div>
-                <div class="field">
-                  <%= f.label :ethnicity %><br />
-                  <%= f.text_field :ethnicity %>
-                </div>
-                <div class="field">
-                  <%= f.label :description %><br />
-                  <%= f.text_field :description %>
-                </div>
-           </div>
-           <div class ='box3'>
-              CONTENT IN HERE
-            </div>
+          <%= f.label :name %><br />
+          <%= f.text_field :name %>
+        </div>
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password %>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation %>
+        </div>
+        <div class="field">
+          <%= f.label :Profile_picture %><br />
+          <%= f.text_field :main_pic_id %>
+        </div>
+        <div class="field">
+          <%= f.label :Tag_Line %><br />
+          <%= f.text_field :tagline %>
+        </div>
+
+        <div class="field">
+          <%= f.label :Age %><br />
+          <%= f.text_field :age %>
+        </div>
+        <div class="field">
+          <%= f.label :gender %><br />
+          <%= f.text_field :gender %>
+        </div>
+        <div class="field">
+          <%= f.label :city %><br />
+          <%= f.text_field :city %>
+        </div>
+        <div class="field">
+          <%= f.label :state %><br />
+          <%= f.text_field :state %>
+        </div>
+        <div class="field">
+          <%= f.label :ethnicity %><br />
+          <%= f.text_field :ethnicity %>
+        </div>
+        <div class="field">
+          <%= f.label :description %><br />
+          <%= f.text_field :description %>
+        </div>
+
         <div class="actions">
           <%= f.submit "Let's do this!", class: "btn" %>
         </div>
