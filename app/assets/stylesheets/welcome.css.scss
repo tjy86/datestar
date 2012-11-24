@@ -24,7 +24,7 @@ p {
 	width: 350px;
 	height: 100px;
 	background: url('form.png');
-	margin: 70px auto;
+	margin: 40px auto;
 	border-radius: 5px;
 
 	.box {
@@ -43,6 +43,12 @@ p {
 		color: $dark-salmon;
 		}
 	}	
+}
+
+img {
+	height: 120px;
+	width: 120px;
+
 }
 
 #how-it-works {
