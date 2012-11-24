@@ -6,6 +6,8 @@
 <%= link_to 'Message Me!',  match_path, class: "btn" if @show %>		<!-- 	# sends to questionaire first -->
 <%= link_to 'Message Me!',  write_path, class: "btn" if @matched %>		<!-- # sends directly to draft -->
 
+
+
 <br>
 <% @user.photos.each do |p| %>
 <%= image_tag p.photo %>
