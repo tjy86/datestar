@@ -1,27 +1,33 @@
-<h1> <%= @user.name %> </h1>
- <%= link_to 'edit', edit_user_path if @authenticated_user == @user %>
-
+<div class = "profile_container">
 <div class="profile">
-	<div class="subheading">Name</div>
-	<div class="subcontent"> <%= @user.name %>  </div>
-	<div class="subheading">Tagline</div>
-	<div class="subcontent"> <%= @user.tagline %>    </div>
-	<div class="subheading">Profile Picture</div>
-	<div class="subcontent"><%= image_tag @user.photos[@user[:main_pic_id]].photo if !(@user.photos.empty?) %></div>
-	<div class="subheading">Age</div>
-	<div class="subcontent"> <%= @user.age %>    </div>
-	<div class="subheading">Gender</div>
-	<div class="subcontent"> <%= @user.gender %>    </div>
-	<div class="subheading">Location</div>
-	<div class="subcontent"> <%= @user.city + @user.state %>    </div>
-	<div class="subheading">Ethnicity</div>
-	<div class="subcontent"> <%= @user.ethnicity %>    </div>
-	<div class="subheading">Description</div>
-	<div class="subcontent"> <%= @user.description %>    </div>
+	<h1> <%= @user.name %> </h1>
+	<%= link_to 'edit', edit_user_path if @authenticated_user == @user %>
+
+	<div class="f1">Name</div>
+	<div class="f1"> <%= @user.name %>  </div>
+	<div class="f1">Tagline</div>
+	<div class="f1"> <%= @user.tagline %>    </div>
+	<div class="f1">Profile Picture</div>
+	<div class="f1">Age</div>
+	<div class="f1"> <%= @user.age %>    </div>
+	<div class="f1">Gender</div>
+	<div class="f1"> <%= @user.gender %>    </div>
+	<div class="f1">Location</div>
+	<div class="f1"> <%= @user.city + @user.state %>    </div>
+	<div class="f1">Ethnicity</div>
+	<div class="f1"> <%= @user.ethnicity %>    </div>
+	<div class="f1">Description</div>
+	<div class="f1"> <%= @user.description %>    </div>
 
 	<%= link_to 'Message Me!',  match_path, class: "btn" if @show %>		<!-- 	# sends to questionaire first -->
 	<%= link_to 'Message Me!',  write_path, class: "btn" if @matched %>		<!-- # sends directly to draft -->
 	 <%= link_to 'edit', edit_user_path if @authenticated_user == @user %>
+</div>
+
+<div class="profile_photo">
+		<div class="f1">Profile Picture</div>
+		<%= image_tag @user.photos[@user[:main_pic_id]].photo if !(@user.photos.empty?) %>
+</div>
 </div>
 
 

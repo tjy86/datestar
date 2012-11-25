@@ -8,5 +8,6 @@
  *= require 'user'
  * require 'question'
  *= require 'pages'
+ *= require 'profile'
 
  */
