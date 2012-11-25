@@ -45,9 +45,68 @@ p {
 	}	
 }
 
-img {
-	height: 120px;
-	width: 120px;
+#images {
+	margin-top: 20px;
+	
+
+	.images {
+		width: 150px;
+		height: 150px;
+		float: left;
+		margin-bottom: 40px;
+	}
+
+	#one {
+		background: url('hipster1.jpeg');
+		background-size: 100%;
+	}
+
+	#two {
+		background: url('hipster2.jpeg');
+		background-size: 100%;
+	}
+
+	#three {
+		background: url('hipster3.jpeg');
+		background-size: 100%;
+	}
+
+	#four {
+		background: url('hipster4.jpeg');
+		background-size: 100%;
+	}
+
+	#five {
+		background: url('hipster5.jpeg');
+		background-size: 100%;
+	}
+
+	#six {
+		background: url('hipster10.jpeg');
+		background-size: 100%;
+	}
+
+	#seven {
+		background: url('hipster7.jpeg');
+		background-size: 100%;
+	}
+
+	#eight {
+		background: url('hipster8.png');
+		background-size: 100%;
+	}
+
+	#nine {
+		background: url('hipster9.jpeg');
+	}
+
+	#ten {
+		background: url('hipster10.jpeg');
+	}
+
+	#eleven {
+		background: url('hipster11.jpeg');
+	}
 
 }
 
@@ -67,15 +126,15 @@ img {
 	padding: 20px;
 
 		#blurb1 {
-			@include blurb(url('instructions-01.png') no-repeat);
+			@include blurb(url('form.png') no-repeat);
 		}
 
 		#blurb2 {
-			@include blurb(url('instructions-02.png') no-repeat);
+			@include blurb(url('form.png') no-repeat);
 		}
 
 		#blurb3 {
-			@include blurb(url('instructions-03.png') no-repeat);
+			@include blurb(url('form.png') no-repeat);
 		}
 
 
