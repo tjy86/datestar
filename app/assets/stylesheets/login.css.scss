@@ -6,27 +6,32 @@
 		width: 940px;
 		padding-top: 35px;
 		background: url('form.png');
-
-		margin: 75px auto;
+		margin: 30px auto;
 		border-radius: 10px;
-		height: 410px;
+		height: 435px;
 	
-		.box{
+		.box_2{
 			width: 240px;
-			height: 340px;
+			height: 360px;
 			float: left;
-			margin-left: 45px;
-			/*background-color: #333;*/
+			margin-left: 40px;
 			opacity: 0.8;
-		}
+			color: white;
+			margin-top: 25px;
+			border: 1px double white;
+			P{	
+					margin-top: 60px;
+					font-size: 25px;
+				}
+			}
 
-		.box3{
-			width: 270px;
-			height: 340px;
+		.box_1{
+			width: 240px;
+			height: 360px;
 			float: left;
-			margin-left: 45px;
-			border: 1px solid white;
-			
+			margin-left: 60px;
+			opacity: 0.8;
+			color: white;
 		}
 
 		label {
@@ -41,65 +46,119 @@
 
 		.btn {
 			margin-top: 20px;
-			margin-left: 110px;;
 		}
-
-		.field {
-			font-family: $julius;
-		}
-
-
-		a {
-		text-decoration: none;
-		color: white;
-		font-size: 25px;
-		}
+	
 }
 
 #first_login {
 
-		width: 940px;
-		height: 230px;
-		padding-top: 26px;
+		width: 400px;
+		height: 275px;
+		padding-top: 5px;
 		background: url('form.png');
 		margin: auto;
 		border-radius: 10px;
-		/*padding-left: 135px;*/
 		margin-top: 75px;
 
 
-		label {
-			color: white;
-			font-size:15px;
-			margin-bottom: -17px;
-		}
-
 		.box_login{
-			margin-left: 250px;
+			margin-left: 95px;
 			opacity: 0.8;
-		}
+			margin-top: 20px;
 
+			.field_login {
+			p{
+				color: white;
+				font-size: 20px;
+				margin-left: 0px;
+				text-align: left;
+				padding: 18px;
+				padding-left: 0px;
+			}
 
-		input {
-			margin-bottom: 25px;
-		}
+			.btn {
+			margin-top: 30px;
+			margin-left: 0px;
+			}
+			.actions{
+				margin-top: 16px;
+			}
 
-		.btn {
-			margin-top: 0px;
-			margin-left: 0px;;
+			input {
+			margin-bottom: 10px;
+			margin-right: 30px;
 		}
-
-		.field {
-			font-family: $julius;
 		}
-
-
-		a {
-		text-decoration: none;
-		color: white;
-		font-size: 25px;
-		}
-		p{
-			color: white;
-		}
+	}
+		
 }
+
+#images_new_user {
+	margin-top: 65px;
+	
+
+	.images {
+		width: 150px;
+		height: 150px;
+		float: left;
+		margin-bottom: 40px;
+	}
+
+	#one {
+		background: url('hipster1.jpeg');
+		background-size: 100%;
+	}
+
+	#two {
+		background: url('hipster2.jpeg');
+		background-size: 100%;
+	}
+
+	#three {
+		background: url('hipster3.jpeg');
+		background-size: 100%;
+	}
+
+	#four {
+		background: url('hipster4.jpeg');
+		background-size: 100%;
+	}
+
+	#five {
+		background: url('hipster5.jpeg');
+		background-size: 100%;
+	}
+
+	#six {
+		background: url('hipster10.jpeg');
+		background-size: 100%;
+	}
+
+	#seven {
+		background: url('hipster7.jpeg');
+		background-size: 100%;
+	}
+
+	#eight {
+		background: url('hipster8.png');
+		background-size: 100%;
+	}
+
+	#nine {
+		background: url('hipster9.jpeg');
+	}
+
+	#ten {
+		background: url('hipster10.jpeg');
+	}
+
+	#eleven {
+		background: url('hipster11.jpeg');
+	}
+
+}
+
+
+
+
+

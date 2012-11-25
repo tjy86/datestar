@@ -6,5 +6,7 @@
  *= require 'welcome'
  *= require 'login'
  *= require 'user'
- *= require 'question'
+ * require 'question'
+ *= require 'pages'
+
  */

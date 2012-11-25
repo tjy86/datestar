@@ -4,9 +4,16 @@
 	<li class="divider"></li>
 </ul>
 
-<div class="question-box">
+<div id="container_logged_in">
 
-	<div class="box">
+	<div class = "content">
+		<p> Enter a Question that if your lova got right it would be the perfect match</p>
+	</div>
+
+	<div class = "divider_box">
+	</div>
+
+	<div class="question">
 		<%= form_for @question do |f| %>
 			<%= f.label :question %>
 			<%= f.text_field :question %>

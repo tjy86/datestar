@@ -1,14 +1,33 @@
-<%= form_for @a do |f| %>
-	<%= f.label :correct_answer %>
-	<%= f.text_field :answer1 %>
+<p>All it takes is <strong>one</strong> right answer!</p>
 
-	<%= f.label :fake_answer %>
-	<%= f.text_field :answer2 %>
+<ul class="nav nav-list">
+	<li class="divider"></li>
+</ul>
 
-	<%= f.label :fake_answer %>
-	<%= f.text_field :answer3 %>
 
-	<%= f.hidden_field :question_id, :value => (Question.where(:user_id => @authenticated_user.id).last if @authenticated_user).id %>
+<div id="container_logged_in">
 
-	<%= f.submit 'save' %>
-<% end %>
+	<div class = "content">
+		<p> Enter an answer that if your lova got right it would be the perfect match</p>
+	</div>
+
+	<div class = "divider_box">
+	</div>
+	<div class="answer">
+		<%= form_for @a do |f| %>
+			<%= f.label :correct_answer %>
+			<%= f.text_field :answer1 %>
+
+			<%= f.label :fake_answer %>
+			<%= f.text_field :answer2 %>
+
+			<%= f.label :fake_answer %>
+			<%= f.text_field :answer3 %>
+
+			<%= f.hidden_field :question_id, :value => (Question.where(:user_id => @authenticated_user.id).last if @authenticated_user).id %>
+
+			<%= f.submit 'save' %>
+		<% end %>
+	</div>
+
+</div>
