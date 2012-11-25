@@ -110,7 +110,11 @@ p {
 
 }
 
+
+
 #how-it-works {
+
+	padding: 100px;
 
 	h1 {
 	text-align: center;
@@ -123,18 +127,21 @@ p {
 	width: 960px;
 	height: 180px;
 	margin: auto;
-	padding: 20px;
+	padding: 30px;
 
 		#blurb1 {
-			@include blurb(url('form.png') no-repeat);
+			@include blurb(url('instructions-01.png') no-repeat);
+			background-size: 100%;
 		}
 
 		#blurb2 {
-			@include blurb(url('form.png') no-repeat);
+			@include blurb(url('instructions-02.png') no-repeat);
+			background-size: 100%;
 		}
 
 		#blurb3 {
-			@include blurb(url('form.png') no-repeat);
+			@include blurb(url('instructions-03.png') no-repeat);
+			background-size: 100%;
 		}
 
 
@@ -146,5 +153,7 @@ p {
 			font-size: 130px;
 			
 		}
-	}	
+	}
+	
 }
+

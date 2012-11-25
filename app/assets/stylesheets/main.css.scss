@@ -8,7 +8,7 @@ body {
 
 	.main {
 	width: 1200px;
-	height: 800px;
+	height: 100%;
 	margin: auto;
 	padding: 30px;
 	}
@@ -24,6 +24,8 @@ header {
 	margin-left: 115px;
 	width: 150px;
 	}
+
+
 
 	nav {
 		float: right;
@@ -62,6 +64,10 @@ footer {
 		#copyrights {
 			margin-left: 115px;
 			padding-top: 20px;
+
+			strong {
+				color: black;
+			}
 		}
 
 			/*SOCIAL MEDIA STYLES*/
@@ -78,6 +84,7 @@ footer {
 	#social-media {
 		float: right;
 		margin-right: 115px;
+		margin-top: -20px;
 	}
 
 	#social-media li {
