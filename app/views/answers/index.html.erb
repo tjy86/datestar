@@ -1,14 +1,14 @@
 <p>All it takes is <strong>one</strong> right answer!</p>
 
 <ul class="nav nav-list">
-	<li class="divider"></li>
+	<li class="divider"></li> 
 </ul>
 
 
 <div id="container_logged_in">
 
 	<div class = "content">
-		<p> Enter an answer that if your lova got right it would be the perfect match</p>
+		<div id="answers"></div>
 	</div>
 
 	<div class = "divider_box">
@@ -26,7 +26,7 @@
 
 			<%= f.hidden_field :question_id, :value => (Question.where(:user_id => @authenticated_user.id).last if @authenticated_user).id %>
 
-			<%= f.submit 'save' %>
+			<%= f.submit 'Save', class: "btn" %>
 		<% end %>
 	</div>
 
