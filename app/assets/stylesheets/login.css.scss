@@ -7,10 +7,10 @@
 		padding-top: 35px;
 		background: url('form.png');
 		margin: 30px auto;
-		border-radius: 10px;
+		border-radius: 5px;
 		height: 435px;
 	
-		.box_2{
+		.box_2 {
 			width: 240px;
 			height: 360px;
 			float: left;
@@ -18,14 +18,17 @@
 			opacity: 0.8;
 			color: white;
 			margin-top: 25px;
-			border: 1px double white;
-			P{	
-					margin-top: 60px;
-					font-size: 25px;
+
+			div {	
+					background: url('newuser.jpeg');
+					background-size: 100%;
+					width: 240px;
+					height: 360px;
+					border-radius: 5px;
 				}
 			}
 
-		.box_1{
+		.box_1 {
 			width: 240px;
 			height: 360px;
 			float: left;
@@ -57,16 +60,18 @@
 		padding-top: 5px;
 		background: url('form.png');
 		margin: auto;
-		border-radius: 10px;
-		margin-top: 75px;
+		border-radius: 5px;
+		margin-top: 45px; 
+		margin-bottom: 35px;
 
 
-		.box_login{
+		.box_login {
 			margin-left: 95px;
 			opacity: 0.8;
 			margin-top: 20px;
 
 			.field_login {
+
 			p{
 				color: white;
 				font-size: 20px;
@@ -80,7 +85,7 @@
 			margin-top: 30px;
 			margin-left: 0px;
 			}
-			.actions{
+			.actions {
 				margin-top: 16px;
 			}
 
@@ -89,76 +94,5 @@
 			margin-right: 30px;
 		}
 		}
-	}
-		
+	}		
 }
-
-#images_new_user {
-	margin-top: 65px;
-	
-
-	.images {
-		width: 150px;
-		height: 150px;
-		float: left;
-		margin-bottom: 40px;
-	}
-
-	#one {
-		background: url('hipster1.jpeg');
-		background-size: 100%;
-	}
-
-	#two {
-		background: url('hipster2.jpeg');
-		background-size: 100%;
-	}
-
-	#three {
-		background: url('hipster3.jpeg');
-		background-size: 100%;
-	}
-
-	#four {
-		background: url('hipster4.jpeg');
-		background-size: 100%;
-	}
-
-	#five {
-		background: url('hipster5.jpeg');
-		background-size: 100%;
-	}
-
-	#six {
-		background: url('hipster10.jpeg');
-		background-size: 100%;
-	}
-
-	#seven {
-		background: url('hipster7.jpeg');
-		background-size: 100%;
-	}
-
-	#eight {
-		background: url('hipster8.png');
-		background-size: 100%;
-	}
-
-	#nine {
-		background: url('hipster9.jpeg');
-	}
-
-	#ten {
-		background: url('hipster10.jpeg');
-	}
-
-	#eleven {
-		background: url('hipster11.jpeg');
-	}
-
-}
-
-
-
-
-

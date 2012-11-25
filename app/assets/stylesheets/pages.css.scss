@@ -7,45 +7,34 @@
 	height: 320px;
 	background: url('form.png');
 	margin: 75px auto;
-	border-radius: 10px;
+	border-radius: 5px;
 	padding-top: 30px;
 	padding-left: 10px;
 	padding-right: 10px;
 	color: white;
 
 	.question{
-		/*margin-left: 50px;*/
 		width: 400px;
 		height: 250px;
 		float: left;
-		/*border: 1px solid white;*/
 		padding: 20px;
 
 		form {
-		margin: 70px 90px 35px;
+		margin: 75px 65px 35px;
 		}
+	}
 
 	.answer{
 		width: 400px;
 		height: 250px;
 		float: left;
 		padding: 20px;	
-		}
 
 		form {
-		margin: 30px 90px 35px;
+		margin: 20px 65px 35px;
 		}
-
-
 	}
 
-	.divider_box{
-		float: right;
-		width: 1px;
-		height: 290px;
-		border: 1px solid white;
-		margin-right: 25px;
-	}
 	.content{
 		width: 400px;
 		height: 250px;
@@ -53,9 +42,24 @@
 		float: right;
 		/*border: 1px solid white;*/
 
-		p{
-			font-size: 25px;
-			margin-top: 30px;
+		div {	
+			background: url('question.jpeg');
+			background-size: 100%;
+			width:500px;
+			height: 300px;
+			border-radius: 5px;
+			margin-left: -115px;
+			margin-top: -25px;
+		}
+
+		#answers {
+			background: url('answers.jpeg');
+			background-size: 100%;
+			width:500px;
+			height: 300px;
+			border-radius: 5px;
+			margin-left: -115px;
+			margin-top: -25px;
 		}
 	}
 }
