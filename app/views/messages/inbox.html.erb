@@ -1,22 +1,40 @@
+<p>
+	I pray you, do not fall in <strong>love</strong> with me, For I am falser than vows made in <strong>wine</strong>.<br><em> Shakespeare</em>
+</p>
 
+<ul class="nav nav-list">
+	<li class="divider"></li>
+</ul>
+<br>
 
-<h1>inbox</h1><hr>
+<div id="images">
+	<div id="nine" class="images"></div>
+	<div id="ten" class="images"></div>
+	<div id="eleven" class="images"></div>
+	<div id="twelve" class="images"></div>
+	<div id="thirteen" class="images"></div>
+	<div id="fourteen" class="images"></div>
+	<div id="fifteen" class="images"></div>
+	<div id="sixteen" class="images"></div>
+</div>
+<br>
+<h1>[Inbox]</h1><hr>
 <br>
 <% @inbox.each do |m| %>
 
-	From: <%= m.sender.name %><br>
-	To: <%= m.receiver.name %><br>
-	Subject: <%= m.subject %><br>
-	Message: <%= m.message %><br>
+	<strong>From:</strong> <%= m.sender.name %><br>
+	<strong>To:</strong> <%= m.receiver.name %><br>
+	<strong>Subject:</strong> <%= m.subject %><br>
+	<strong>Message:</strong> <%= m.message %><br>
 	<hr>
 <% end %><br><br>
 
-<h1>sentbox</h1><hr>
+<h1>[Sent Messages]</h1><hr>
 <br>
 <% @sentbox.each do |m| %>
-	From: <%= m.sender.name %><br>
-	To: <%= m.receiver.name %><br>
-	Subject: <%= m.subject %><br>
-	Message: <%= m.message %><br>
+	<strong>From:</strong> <%= m.sender.name %><br>
+	<strong>To:</strong> <%= m.receiver.name %><br>
+	<strong>Subject:</strong> <%= m.subject %><br>
+	<strong>Message:</strong> <%= m.message %><br>
 	<hr>
 <% end %>

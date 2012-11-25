@@ -8,7 +8,7 @@ body {
 
 	.main {
 	width: 1200px;
-	height: 800px;
+	height: 100%;
 	margin: auto;
 	padding: 30px;
 	}
@@ -24,6 +24,8 @@ header {
 	margin-left: 115px;
 	width: 150px;
 	}
+
+
 
 	nav {
 		float: right;
@@ -52,7 +54,7 @@ header {
 }
 
 footer {
-		height: 70px;
+		height: 90px;
 		background: $light-blue;
 
 		.heart:hover {
@@ -62,6 +64,10 @@ footer {
 		#copyrights {
 			margin-left: 115px;
 			padding-top: 20px;
+
+			strong {
+				color: black;
+			}
 		}
 
 			/*SOCIAL MEDIA STYLES*/
@@ -78,6 +84,7 @@ footer {
 	#social-media {
 		float: right;
 		margin-right: 115px;
+		margin-top: -20px;
 	}
 
 	#social-media li {
@@ -85,8 +92,8 @@ footer {
 	}
 
 	#social-media ul li a {
-	     width: 42px;
-	     height: 42px;
+	     width: 35px;
+	     height: 27px;
 	     float: left;
 	     background: url('social-sprites-02.png') no-repeat;
 	/*     /*SCOTT KELLUM IMAGE REPLACEMENT SNIPPET*/
@@ -96,19 +103,19 @@ footer {
 	}
 
 	     #social-media ul li a.facebook {
-	          background-position: -6px -7px;
+	          background-position: 6px -3px;
 	     }
 
 	     #social-media ul li a.twitter {
-	          background-position: -50px -7px;
+	          background-position: -30px -2px;
 	     }
 
 	     #social-media ul li a.facebook:hover {
-	          background-position: -6px -54px;
+	          background-position: 6px -27px;
 	     }
 
 	     #social-media ul li a.twitter:hover {
-	          background-position: -50px -54px;
+	          background-position: -30px -25px;
 	     }
 }
 

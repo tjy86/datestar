@@ -1,4 +1,3 @@
-
 @import "colors";
 @import "blurb";
 @import "fonts";
@@ -29,6 +28,32 @@ p {
 
 	em {
 		font-size: 20px;
+	}
+}
+
+.profile {
+	width: 970px;
+	padding-top: 35px;
+	background: url('form.png');
+	margin: auto;
+	border-radius: 10px;
+	padding: 20px;
+
+	.subcontent {
+		color: white;
+	}
+
+	.btn {
+		float: right;
+	}
+
+
+
+	.box {
+	width: 450px;
+	margin-left: 50px;
+	padding: 20px;
+	color: white;
 	}
 }
 
@@ -72,5 +97,21 @@ USERS **/
 	a {
 
 	}
+}
+
+
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
 }
 

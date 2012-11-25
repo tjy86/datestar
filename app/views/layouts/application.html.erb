@@ -10,7 +10,7 @@
 <body>
 	<header>
 		<div id="logo"><%= link_to image_tag('logo-01.png'), root_path %></div>
-		<nav>
+		<nav >
 			<strong>
 				<%= show_dynamic_links %>
 				<%= link_to "MY PROFILE", user_path(@authenticated_user) if @authenticated_user %>
@@ -29,7 +29,7 @@
 
 	<footer>
 		<div id="copyrights">
-			© 2012 cutie.pie :: All rights reserved ::
+			© 2012 <strong>cutie.pie</strong> :: All rights reserved ::
 			Made by Hand. [<span class="heart">&#x2665;</span>]
 		</div>
 
