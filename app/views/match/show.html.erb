@@ -1,21 +1,39 @@
+<p>
+	<strong>Love</strong> is a smoke and is made with the fume of sighs.<br><em> Shakespeare</em>
+</p>
 
+<ul class="nav nav-list">
+	<li class="divider"></li>
+</ul>
+<br>
+<div id="images">
+	<div id="seventeen" class="images"></div>
+	<div id="sixteen" class="images"></div>
+	<div id="nineteen" class="images"></div>
+	<div id="three" class="images"></div>
+	<div id="twenty" class="images"></div>
+	<div id="eighteen" class="images"></div>
+	<div id="twelve" class="images"></div>
+	<div id="seven" class="images"></div>
+</div>
 
-<h1>People I liked</h1><hr>
+<br>
+<h1>[People I liked]</h1><hr>
 <br>
 <% @me_to_you.each do |m| %>
 
-	From: <%= m.metoyou.name %><br>
-	To: <%= m.youtome.name %><br>
-	Match?: <%= m.match %><br>
+	<strong>From: </strong> <%= m.metoyou.name %><br>
+	<strong>To: </strong><%= m.youtome.name %><br>
+	<strong>Match? </strong><%= m.match %><br>
 	<hr>
 <% end %><br><br>
 
-<h1>People who liked me</h1><hr>
+<h1>[People who liked me]</h1><hr>
 <br>
 <% @you_to_me.each do |m| %>
 
-	From: <%= m.metoyou.name %><br>
-	To: <%= m.youtome.name %><br>
-	Match?: <%= m.match %><br>
+	<strong>From: </strong><%= m.metoyou.name %><br>
+	<strong>To: </strong><%= m.youtome.name %><br>
+	<strong>Match? </strong> <%= m.match %><br>
 	<hr>
 <% end %><br><br>

@@ -1,35 +1,48 @@
+<p>
+	Who ever <strong>loved</strong> that <strong>loved</strong> not at first sight?<em> Shakespeare</em>
+</p>
+
+<ul class="nav nav-list">
+	<li class="divider"></li>
+</ul>
+
+<br>
 <h1> <%= @user.name %> </h1>
  <%= link_to 'edit', edit_user_path if @authenticated_user == @user %>
 
-<div class="profile">
-	<div class="subheading">Name</div>
-	<div class="subcontent"> <%= @user.name %>  </div>
-	<div class="subheading">Tagline</div>
-	<div class="subcontent"> <%= @user.tagline %>    </div>
-	<div class="subheading">Profile Picture</div>
-	<div class="subcontent"><%= image_tag @user.photos[@user[:main_pic_id]].photo if !(@user.photos.empty?) %></div>
-	<div class="subheading">Age</div>
-	<div class="subcontent"> <%= @user.age %>    </div>
-	<div class="subheading">Gender</div>
-	<div class="subcontent"> <%= @user.gender %>    </div>
-	<div class="subheading">Location</div>
-	<div class="subcontent"> <%= @user.city + @user.state %>    </div>
-	<div class="subheading">Ethnicity</div>
-	<div class="subcontent"> <%= @user.ethnicity %>    </div>
-	<div class="subheading">Description</div>
-	<div class="subcontent"> <%= @user.description %>    </div>
-
-	<%= link_to 'Message Me!',  match_path, class: "btn" if @show %>		<!-- 	# sends to questionaire first -->
-	<%= link_to 'Message Me!',  write_path, class: "btn" if @matched %>		<!-- # sends directly to draft -->
-	 <%= link_to 'edit', edit_user_path if @authenticated_user == @user %>
-</div>
-
-
-<h2>Pictures:</h2>
+ <h2>Pictures:</h2>
 <br>
 <% @user.photos.each do |p| %>
 <%= image_tag p.photo.thumb %>
 <% end %>
+
+<div class="profile">
+	<div id="left">
+		<div class="subheading"><strong>Name</strong></div>
+		<div class="subcontent"> <%= @user.name %>  </div>
+		<div class="subheading"><strong>Tagline</strong></div>
+		<div class="subcontent"> <%= @user.tagline %>    </div>
+		<div class="subheading"><strong>Profile Picture</strong></div>
+		<div class="subcontent"><%= image_tag @user.photos[@user[:main_pic_id]].photo if !(@user.photos.empty?) %></div>
+	</div>
+	<div id="right">
+		<div class="subheading"><strong>Age</strong></div>
+		<div class="subcontent"> <%= @user.age %>    </div>
+		<div class="subheading"><strong>Gender</strong></div>
+		<div class="subcontent"> <%= @user.gender %>    </div>
+		<div class="subheading"><strong>Location</strong></div>
+		<div class="subcontent"> <%= @user.city + @user.state %></div>
+		<div class="subheading"><strong>Ethnicity</strong></div>
+		<div class="subcontent"> <%= @user.ethnicity %>    </div>
+		<div class="subheading"><strong>Description</strong></div>
+		<div class="subcontent"> <%= @user.description %>    </div>
+	</div>
+
+	<%= link_to 'Message Me!',  match_path, class: "btn clearfix" if @show %>		<!-- 	# sends to questionaire first -->
+	<%= link_to 'Message Me!',  write_path, class: "btn clearfix" if @matched %>		<!-- # sends directly to draft -->
+	 <%= link_to 'edit', edit_user_path if @authenticated_user == @user %>
+</div>
+
 
 	<%= form_for @p, html: {multipart: true} do |f| %>
 		<%= f.label :photo if (@authenticated_user == @user) %>
