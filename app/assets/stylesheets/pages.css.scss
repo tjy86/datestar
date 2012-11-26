@@ -63,3 +63,66 @@
 		}
 	}
 }
+
+#match_question {
+	width: 750px;
+	padding-top: 25px;
+	background: url('form.png');
+	margin: auto;
+	border-radius: 5px;
+
+	.box {
+	width: 750px;
+	margin: auto;
+	padding: 20px;
+	color: white;
+	padding: 30px;
+	}
+
+	h2 {
+		margin-left: 50px;
+		margin-right: 20px;
+	}
+
+	form {
+		padding-left: 20px;
+		margin: 20px;
+
+	}
+
+	input {
+		display: inline-block;
+		margin-left: 20px;
+		text-align: center;
+	}
+}
+
+
+#private_message {
+	width: 600px;
+	background: url('form.png');
+	margin: auto;
+	border-radius: 5px;
+
+	.box {
+	width: 600px;
+	margin: auto;
+	color: white;
+	padding: 30px;
+	}
+
+	input {
+		display: middle;
+	}
+
+	h2 {
+		text-align: center;
+		margin-right: 50px;
+
+
+	}
+
+		.heart:hover {
+			color: $dark_salmon;
+		}
+}

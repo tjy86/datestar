@@ -9,17 +9,17 @@
 	<div class = "profile_1">
 		<div class = "profile_info">
 				<h1> <%= @user.name %> </h1>
-				<div class="f1">Tagline: <%= @user.tagline %> </div>
-				<div class="f1">Age: <%= @user.age %></div>
-				<div class="f1">Gender: <%= @user.gender %></div>
-				<div class="f1">Location:</div>
-				<div class="f1"> <%= @user.city + ' , ' + @user.state %>    </div>
-				<div class="f1">Ethnicity: <%= @user.ethnicity %></div>
-				<div class="f1">Description:</div>
-				<div class="f1"> <%= @user.description %>    </div>
-				<%= link_to 'edit', edit_user_path if @authenticated_user == @user %>
+				<div class="f1"><strong>Tagline:</strong> <%= @user.tagline %> </div>
+				<div class="f1"><strong>Age:</strong> <%= @user.age %></div>
+				<div class="f1"><strong>Gender:</strong> <%= @user.gender %></div>
+				<div class="f1"><strong>Location:</strong></div>
+				<div class="f1"> <%= @user.city + ' , ' + @user.state %></div>
+				<div class="f1"><strong>Ethnicity:</strong> <%= @user.ethnicity %></div>
+				<div class="f1"><strong>Description:</strong></div>
+				<div class="f1"> <%= @user.description %></div>
+				<br>
+				<em><%= link_to 'Edit Profile', edit_user_path if @authenticated_user == @user %></em>
 		</div>
-
 	</div>
 
 	<div class = "photo_upload">
@@ -30,12 +30,14 @@
 </div>
 
 <div class = "send_message">
-	<%= link_to 'Message Me!',  match_path, class: "btn clearfix" if @show %>		
+	<%= link_to 'Message Me!',  match_path, class: "btn clearfix" if @show %>
 	<%= link_to 'Message Me!',  write_path, class: "btn clearfix" if @matched %>
 </div>
 
+<hr><br>
+
 <div class = "pictures">
-		<h2>Pictures</h2>
+		<h2><%= @user.name %>'s pictures...[<span class="heart">&#x2665;</span>]</h2>
 	<br>
 	<% @user.photos.each do |p| %>
 	<%= image_tag p.photo.thumb %>
@@ -47,11 +49,16 @@
 				<%= f.file_field :photo  if (@authenticated_user == @user) %>
 				<%= f.text_field :remote_photo_url if (@authenticated_user == @user) %>
 				<%= f.hidden_field :user_id, :value => @authenticated_user.id if @authenticated_user %>
-		 		<%= f.submit :upload, class: "btn_photo"  if (@authenticated_user == @user) %>
+		 		<%= f.submit :upload, class: "btn"  if (@authenticated_user == @user) %>
 			<% end %>
 	</div>
 </div>
 
+<ul>
+<% @user.questions.each do |q|  %>
+<li><%= q.question %></li>
+<% end %>
+</ul>
 
 
-	
+
