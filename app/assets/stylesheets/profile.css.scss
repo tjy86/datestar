@@ -2,6 +2,7 @@
 @import "blurb";
 @import "fonts";
 
+
 .profile_container{
 	height: 350px;
 	padding-top: 30px;
@@ -18,12 +19,19 @@
 			border-radius: 5px;
 
 			.profile_info{
-				margin-left: 0px;
-				margin-top: 30px;
-				text-align: center;
+				padding: 20px;
+				font-size: 15px;
 
 				h1{
 					margin-bottom: 30px;
+				}
+
+				strong {
+					color: $dark_salmon;
+				}
+
+				a {
+					color: $light_blue;
 				}
 
 			}
@@ -42,7 +50,7 @@
 				height: 200px;
 				margin-left: 75px;
 				margin-top: 30px;
-				margin-bottom: 20px
+				margin-bottom: 20px;
 			}
 			.f3{
 				text-align: center;
@@ -50,10 +58,17 @@
 				margin-bottom: 20px;
 				font-size: 25px;
 			}
-			.btn_upload
-			{
+			
+			img {
+				border-radius: 5px;
 
+
+				&:hover {
+					opacity: .7;
+				}
 			}
+
+
 		}
 }
 
@@ -75,6 +90,10 @@
 		h2{
 			text-align: center;
 		}
+
+		.heart:hover {
+					color: $dark_salmon;
+				}
 		.photo_form{
 				margin-top: 20px;
 				width: 250px;
