@@ -30,5 +30,6 @@ class MatchController < ApplicationController
       user_id = params[:id]
       @me_to_you = User.find(user_id).initiator
       @you_to_me = User.find(user_id).initiated
+      @user = User.find(user_id)
     end
 end

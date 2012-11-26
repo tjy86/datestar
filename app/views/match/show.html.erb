@@ -37,3 +37,12 @@
 	<strong>Match? </strong> <%= m.match %><br>
 	<hr>
 <% end %><br><br>
+
+<h1>[My Questions]</h1><hr>
+<br>
+
+<% @user.questions.each do |q|  %>
+<li><%= q.question %></li>
+<% end %>
+
+
