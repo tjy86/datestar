@@ -1,11 +1,25 @@
-hello<br>
-write some text to your lova.
+<p>
+	My analyst warned me, but you were so <strong>beautiful</strong> I got another analyst.<br><em> Woody Allen</em>
+</p>
 
-<%= form_for @message do |f| %>
-	<%= f.label :subject %>
-	<%= f.text_field :subject %>
-	<%= f.label :message %>
-	<%= f.text_field :message %>
-	<%= hidden_field_tag 'receiver_id', @receiver.id %>
-	<%= f.submit 'save' %>
-<% end %>
+<ul class="nav nav-list">
+	<li class="divider"></li>
+</ul>
+<br>
+
+
+
+<div id="private_message">
+	<div class="box">
+		<h2>Send a private message! [<span class="heart">&#x2665;</span>]</h2>
+		<%= form_for @message do |f| %>
+			<%= f.label :subject %>
+			<%= f.text_field :subject, class: "input-xxlarge" %>
+			<%= f.label :message %>
+			<%= f.text_area :message, class: "input-xxlarge" %>
+			<%= hidden_field_tag 'receiver_id', @receiver.id %>
+			<br>
+			<%= f.submit 'Send!', class: "btn" %>
+		<% end %>
+	</div>
+</div>

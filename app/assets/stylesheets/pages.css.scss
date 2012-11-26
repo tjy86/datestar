@@ -69,7 +69,7 @@
 	padding-top: 25px;
 	background: url('form.png');
 	margin: auto;
-	border-radius: 10px;
+	border-radius: 5px;
 
 	.box {
 	width: 750px;
@@ -95,4 +95,34 @@
 		margin-left: 20px;
 		text-align: center;
 	}
+}
+
+
+#private_message {
+	width: 600px;
+	background: url('form.png');
+	margin: auto;
+	border-radius: 5px;
+
+	.box {
+	width: 600px;
+	margin: auto;
+	color: white;
+	padding: 30px;
+	}
+
+	input {
+		display: middle;
+	}
+
+	h2 {
+		text-align: center;
+		margin-right: 50px;
+
+
+	}
+
+		.heart:hover {
+			color: $dark_salmon;
+		}
 }
