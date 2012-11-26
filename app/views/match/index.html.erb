@@ -1,13 +1,19 @@
-<%= @receiver.name %>
+<p>
+	You want to send <strong><%= @receiver.name %></strong> a love note?<br><em>Answer one simple question :-)</em><br>
+</p>
 
+<ul class="nav nav-list">
+	<li class="divider"></li>
+</ul>
 <br>
 
 
-<%= @q.question  %>
-<br>
 
+<div id="match_question">
+	<div class="box">
 
-
+		<h2><%= @q.question  %></h2>
+		<br>
 
 <%= form_tag do %>
 <%= hidden_field_tag 'question', @q.id %>
@@ -21,5 +27,9 @@
 	<%= radio_button_tag 'answer', array[0], false %><%= array[0] %><br>
 	<%= radio_button_tag 'answer', array[1], false %><%= array[1] %><br>
 	<%= radio_button_tag 'answer', array[2], false %><%= array[2] %><br>
-	<%= submit_tag 'go' %>
+	<br>
+	<%= submit_tag 'Try your luck!', class: "btn" %>
 <% end %>
+	</div>
+</div>
+

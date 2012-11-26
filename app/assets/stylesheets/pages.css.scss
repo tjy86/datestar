@@ -63,3 +63,36 @@
 		}
 	}
 }
+
+#match_question {
+	width: 750px;
+	padding-top: 25px;
+	background: url('form.png');
+	margin: auto;
+	border-radius: 10px;
+
+	.box {
+	width: 750px;
+	margin: auto;
+	padding: 20px;
+	color: white;
+	padding: 30px;
+	}
+
+	h2 {
+		margin-left: 50px;
+		margin-right: 20px;
+	}
+
+	form {
+		padding-left: 20px;
+		margin: 20px;
+
+	}
+
+	input {
+		display: inline-block;
+		margin-left: 20px;
+		text-align: center;
+	}
+}
