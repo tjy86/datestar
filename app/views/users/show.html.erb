@@ -30,7 +30,7 @@
 </div>
 
 <div class = "send_message">
-	<%= link_to 'Message Me!',  match_path, class: "btn clearfix" if @show %>		
+	<%= link_to 'Message Me!',  match_path, class: "btn clearfix" if @show %>
 	<%= link_to 'Message Me!',  write_path, class: "btn clearfix" if @matched %>
 </div>
 
@@ -52,6 +52,10 @@
 	</div>
 </div>
 
+<ul>
+<% @user.questions.each do |q|  %>
+<li><%= q.question %></li>
+<% end %>
+</ul>
 
 
-	
