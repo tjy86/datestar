@@ -13,8 +13,13 @@
 <%= hidden_field_tag 'question', @q.id %>
 <%= hidden_field_tag 'receiver', @receiver.id %>
 <!-- loop here to randomize -->
-	<%= radio_button_tag 'answer', @a[0].answer1, false %><%= @a[0].answer1 %><br>
-	<%= radio_button_tag 'answer', @a[0].answer2, false %><%= @a[0].answer2 %><br>
-	<%= radio_button_tag 'answer', @a[0].answer3, false %><%= @a[0].answer3 %><br>
+
+<% array = [] %>
+<% array << @a[0].answer1 << @a[0].answer2 << @a[0].answer3 %>
+<% array = array.shuffle %>
+
+	<%= radio_button_tag 'answer', array[0], false %><%= array[0] %><br>
+	<%= radio_button_tag 'answer', array[1], false %><%= array[1] %><br>
+	<%= radio_button_tag 'answer', array[2], false %><%= array[2] %><br>
 	<%= submit_tag 'go' %>
 <% end %>
