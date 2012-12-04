@@ -11,6 +11,7 @@
 
 class Photo < ActiveRecord::Base
 	belongs_to :user
+	storage :fog
 
 	mount_uploader :photo, PhotoUploader
 	default_scope order(:id)
