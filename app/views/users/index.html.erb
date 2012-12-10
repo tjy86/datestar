@@ -11,7 +11,7 @@
 		<% @users.each do |u| %>
 		<div id="user">
 			<%= link_to u.name, u %> <br>
-			<%= image_tag u.photos[u[:main_pic_id]].photo if !(u.photos.empty?) %>
+			<%#= image_tag u.photos[u[:main_pic_id]].photo if !(u.photos.empty?) %>
 		</div>
 		<% end %>
 	</div>

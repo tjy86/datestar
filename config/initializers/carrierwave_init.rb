@@ -8,5 +8,3 @@ CarrierWave.configure do |config|
 
   config.fog_directory  = 'cutie.pie'                     # required
   config.fog_public     = false                                   # optional, defaults to true
-
-end
