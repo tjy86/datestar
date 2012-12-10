@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
     :region                 => 'us-east-1'  # optional, defaults to 'us-east-1'
   }
 
-  config.fog_directory  = 'cutie-pie-ty'                     # required
+  config.fog_directory  = 'cutie.pie'                     # required
   config.fog_public     = false                                   # optional, defaults to true
 
 end
